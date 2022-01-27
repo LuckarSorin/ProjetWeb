@@ -38,7 +38,7 @@
                     }else{
                         echo"<td>indisponible</td>";
                     }
-                    echo "</tr>";
+                    echo "</tr><br/>";
                 }
             }
         ?>
