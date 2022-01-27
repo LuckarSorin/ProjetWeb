@@ -4,7 +4,7 @@ CREATE DATABASE projetWeb;
 create table IF NOT EXISTS projetWeb.users ( 
     userid int PRIMARY KEY NOT NULL AUTO_INCREMENT,
     username varchar(32) NOT NULL,
-    pwd varchar(64) NOT NULL,
+    pwd varchar(64) NOT NULL
 );
 
 create table IF NOT EXISTS projetWeb.edits (
@@ -12,7 +12,7 @@ create table IF NOT EXISTS projetWeb.edits (
     name varchar(32) NOT NULL,
     desc varchar(16384) NOT NULL,
     empreint varchar(32) DEFAULT NULL,
-    disp bool NOT NULL DEFAULT 0,
+    disp bool NOT NULL DEFAULT 0
 );
 
 -- ---Insertion for example and tests
