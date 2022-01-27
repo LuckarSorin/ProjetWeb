@@ -33,9 +33,9 @@ INSERT INTO projetWeb.users(username,pwd) VALUES("prof5","prof5"); -- prof5
 
 -- projet.edits
 
-INSERT INTO projetWeb.edits(name,desc) VALUES ("informatik","salle informatique");
-INSERT INTO projetWeb.edits(name,desc) VALUES ("reunion","salle de réunion");
-INSERT INTO projetWeb.edits(name,desc) VALUES ("calculator","temps de calcul sur un super calculateur");
-INSERT INTO projetWeb.edits(name,desc) VALUES ("amphi","salle de conférence");
-INSERT INTO projetWeb.edits(name,desc) VALUES ("kino","salle de vidéo projection");
-INSERT INTO projetWeb.edits(name,desc) VALUES ("hdmi3","cable hdmi de 3 mètres");
+INSERT INTO projetWeb.edits(name,descript) VALUES ("informatik","salle informatique");
+INSERT INTO projetWeb.edits(name,descript) VALUES ("reunion","salle de réunion");
+INSERT INTO projetWeb.edits(name,descript) VALUES ("calculator","temps de calcul sur un super calculateur");
+INSERT INTO projetWeb.edits(name,descript) VALUES ("amphi","salle de conférence");
+INSERT INTO projetWeb.edits(name,descript) VALUES ("kino","salle de vidéo projection");
+INSERT INTO projetWeb.edits(name,descript) VALUES ("hdmi3","cable hdmi de 3 mètres");
