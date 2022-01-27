@@ -26,7 +26,7 @@
             </tr><br>
             <tr>
                 MDP : 
-                <input type="text" name="connection">
+                <input type="password" name="mdp" minlenght="8">
             </tr><br>
             <tr>
                 <input type="submit" name="connect" value="connection">
