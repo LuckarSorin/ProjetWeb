@@ -15,13 +15,6 @@ create table IF NOT EXISTS projetWeb.edits (
     disp int NOT NULL DEFAULT 0
 );
 
--- ---Insertion for example and tests
-DELETE FROM projetWeb.users;
-ALTER TABLE projet.users AUTO_INCREMENT = 1;
-
-DELETE FROM projetWeb.edits;
-ALTER TABLE projet.edits AUTO_INCREMENT = 1;
-
 -- projet.users
 
 INSERT INTO projet.users(username,pwd) VALUES("admin","admin"); -- administrateur
