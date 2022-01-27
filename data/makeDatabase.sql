@@ -10,7 +10,7 @@ create table IF NOT EXISTS projetWeb.users (
 create table IF NOT EXISTS projetWeb.edits (
     equipid int PRIMARY KEY AUTO_INCREMENT,
     name varchar(32) NOT NULL,
-    desc varchar(16384) NOT NULL,
+    descript varchar(16384) NOT NULL,
     empreint varchar(32) DEFAULT NULL,
     disp int NOT NULL DEFAULT 0
 );
