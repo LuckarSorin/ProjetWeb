@@ -30,6 +30,7 @@
                     echo "</tr>";
                 }
             ?>
-            </table>
+        </table>
+        <a href="logout.php">Deconnection</a>
     </body>
 </html>
