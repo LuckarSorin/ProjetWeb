@@ -32,7 +32,7 @@
                 $req="select userid from users where username = ? AND pwd = ?";
 
                 $stmt = mysqli_prepare($connexion, $req);
-                mysqli_stmt_bind_param($stmt, "ss", $_POST['mail'], $_POST['mdp']);
+                mysqli_stmt_bind_param($stmt, "ss", $_POST['connection'], $_POST['mdp']);
                 mysqli_stmt_execute($stmt);
                 $result = mysqli_stmt_get_result($stmt);
 
