@@ -33,7 +33,7 @@
                 while($ligne = mysqli_fetch_array($stmt, MYSQLI_ASSOC)){    
                     echo "<tr>";
                     echo "<td>".$ligne['name']."</td> ";
-                    if($ligne['disp']==NULL){
+                    if($ligne['disp']==1){
                         echo"<td>Disponible</td>";
                     }else{
                         echo"<td>indisponible</td>";
