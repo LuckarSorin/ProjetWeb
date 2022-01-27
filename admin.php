@@ -29,6 +29,7 @@
                     echo "<td>".$ligne['username']."</td>";
                     echo "</tr>";
                 }
+            }
             ?>
         </table>
         <a href="logout.php">Deconnection</a>
