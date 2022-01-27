@@ -25,8 +25,8 @@
 
                 while($ligne = mysqli_fetch_array($stmt, MYSQLI_ASSOC)){    
                     echo "<tr>";
-                    echo "<td>".$ligne['name']."</td>";
-                    echo "<td>".$ligne['username']."</td>";
+                    echo "<td>".$ligne['name']."</td><br>";
+                    echo "<td>".$ligne['username']."</td><br>";
                     echo "</tr>";
                 }
             }
