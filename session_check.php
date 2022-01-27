@@ -18,12 +18,12 @@
         foreach($result as $ligne) $cat = $ligne;
         if (!isset($cat)){
             $_SESSION['connected'] = NULL;
-            header('Location: connection.php?id=connexion_error');
+            header('Location: page-connection.php?id=connexion_error');
             exit(0);
         }
 
     }else{
-        header('Location: connection.php?id=connexion_error');
+        header('Location: page-connection.php?id=connexion_error');
         exit(0);
     }
 ?>
