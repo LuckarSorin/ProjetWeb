@@ -20,10 +20,7 @@
 
     <body>
          <?php
-            $login = "root";
-            $mdp = "";
-            $host = "localhost";
-            $bdd="projet";
+            require "data/dblogin.php";
 
             if(session_status() != PHP_SESSION_ACTIVE){
                 session_start();
