@@ -26,19 +26,30 @@
             if(session_status() != PHP_SESSION_ACTIVE){
                 session_start();
             }
-            if(isset($_SESSION['connected'])){
+            if(isset($_POST['connection'],$_POST['mdp'])){
                 $connexion=mysqli_connect($host,$login,$mdp,$bdd) or die("connexion impossible");
 
-                $req="select userid from users where userid = ?";
+                $req="select userid from users where username = ? AND pwd = ?";
 
                 $stmt = mysqli_prepare($connexion, $req);
-                mysqli_stmt_bind_param($stmt, "i", $_SESSION['connected']);
+                mysqli_stmt_bind_param($stmt, "ss", $_POST['mail'], $_POST['mdp']);
                 mysqli_stmt_execute($stmt);
                 $result = mysqli_stmt_get_result($stmt);
 
-                if ($result){
-                    header('Location: index.php');
-                    exit(0);
+                foreach ($result as $ligne) $cat = $ligne;
+                if (isset($cat)){
+                    if(session_status() != PHP_SESSION_ACTIVE){
+                        session_start();
+                    }
+                    $_SESSION['connected'] = $cat["userid"];
+                    if ($_SESSION['connected'] == 1){
+                        header('Location: admin.php');
+                        exit(0);
+                    }
+                    else {
+                        header('Location: accueil.php');
+                        exit(0);
+                    }
                 }
             }
             //connexion.php n'utilise pas session_check.php pour éviter une boucle infinie de redirection
