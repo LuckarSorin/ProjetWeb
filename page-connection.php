@@ -71,7 +71,7 @@
             }
 
             ?>
-        <form method="post" action="page-connection.php">
+        <form action="page-connection.php" method="post">
             <tr>
                 Login : 
                 <input type="text" name="connection">
