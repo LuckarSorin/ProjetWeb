@@ -24,12 +24,12 @@ ALTER TABLE projet.edits AUTO_INCREMENT = 1;
 
 -- projet.users
 
-INSERT INTO projet.users(username,pwd) VALUES("Admin","administrateur"); -- administrateur
-INSERT INTO projet.users(username,pwd) VALUES("Prof1","prof1"); -- prof1
-INSERT INTO projet.users(username,pwd) VALUES("Prof2","prof2"); -- prof2
-INSERT INTO projet.users(username,pwd) VALUES("Prof3","prof3"); -- prof3
-INSERT INTO projet.users(username,pwd) VALUES("Prof4","prof4"); -- prof4
-INSERT INTO projet.users(username,pwd) VALUES("Prof5","prof5"); -- prof5
+INSERT INTO projet.users(username,pwd) VALUES("admin","admin"); -- administrateur
+INSERT INTO projet.users(username,pwd) VALUES("prof1","prof1"); -- prof1
+INSERT INTO projet.users(username,pwd) VALUES("prof2","prof2"); -- prof2
+INSERT INTO projet.users(username,pwd) VALUES("prof3","prof3"); -- prof3
+INSERT INTO projet.users(username,pwd) VALUES("prof4","prof4"); -- prof4
+INSERT INTO projet.users(username,pwd) VALUES("prof5","prof5"); -- prof5
 
 -- projet.edits
 
