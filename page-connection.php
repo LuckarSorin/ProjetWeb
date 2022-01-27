@@ -50,6 +50,8 @@
                         header('Location: accueil.php');
                         exit(0);
                     }
+                    $_POST['connection']= null;
+                    $_POST['mdp']=null;
                 }
             }
             //connexion.php n'utilise pas session_check.php pour éviter une boucle infinie de redirection
