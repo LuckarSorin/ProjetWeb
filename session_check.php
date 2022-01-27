@@ -2,10 +2,7 @@
     if(session_status() != PHP_SESSION_ACTIVE){
         session_start();
     }
-    $login = "root";
-    $mdp = "";
-    $host = "localhost";
-    $bdd="projet";
+    require "data/dblogin.php";	
 
     if(isset($_SESSION['connected'])){
 
