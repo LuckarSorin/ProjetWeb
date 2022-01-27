@@ -11,18 +11,36 @@
     <header>
         <img src="image/logo_mes_outils.png" alt="Mes-Outils" height="100" width="100">
         <h1>Mes-Outils</h1>
-        <div id="navigation">
-            <ul>
-                <li><a href="index.php">Accueil</a></li>
-                <li><a href="page-connection.php">Connection</a></li>
-                <li><a href="page-inscription.php">Inscription</a></li>
-            </ul>
-        </div>
+        <a href="logout.php">Déconnection</a>
     </header>
 
     <body>
         <?php
             include"session_check.php";
+            if(session_status() != PHP_SESSION_ACTIVE){
+                session_start();
+            }
+            require "data/dblogin.php";
+        
+            if(isset($_SESSION['connected'])){
+        
+                $connexion=mysqli_connect($host,$login,$mdp,$bdd) or die("connexion impossible");
+        
+                $req="select name,disp from edits";
+        
+                $stmt = mysqli_query($connexion, $req) or die('erreur');
+
+                while($ligne = mysqli_fetch_array($stmt, MYSQLI_ASSOC)){    
+                    echo "<tr>";
+                    echo "<td>".$ligne['name']."</td>";
+                    if($ligne['disp']==NULL){
+                        echo"<td>Disponible</td>";
+                    }else{
+                        echo"<td>indisponible</td>";
+                    }
+                    echo "</tr>";
+                }
+            }
         ?>
         <h1>Hello</h1>
     </body>
