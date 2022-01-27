@@ -11,8 +11,8 @@ create table IF NOT EXISTS projetWeb.edits (
     equipid int PRIMARY KEY AUTO_INCREMENT,
     name varchar(32) NOT NULL,
     descript varchar(16384) NOT NULL,
-    empreint varchar(32) DEFAULT NULL,
-    disp int NOT NULL DEFAULT 0
+    empreint int DEFAULT NULL,
+    disp int NOT NULL DEFAULT 1
 );
 
 -- ---Insertion for example and tests
@@ -33,9 +33,9 @@ INSERT INTO projetWeb.users(username,pwd) VALUES("prof5","prof5"); -- prof5
 
 -- projet.edits
 
-INSERT INTO projetWeb.edits(name,descript) VALUES ("informatik","salle informatique");
-INSERT INTO projetWeb.edits(name,descript) VALUES ("reunion","salle de réunion");
-INSERT INTO projetWeb.edits(name,descript) VALUES ("calculator","temps de calcul sur un super calculateur");
+INSERT INTO projetWeb.edits(name,descript,empreint,disp) VALUES ("informatik","salle informatique",2,0);
+INSERT INTO projetWeb.edits(name,descript,empreint,disp) VALUES ("reunion","salle de réunion",3,0);
+INSERT INTO projetWeb.edits(name,descript,empreint,disp) VALUES ("calculator","temps de calcul sur un super calculateur",4,0);
 INSERT INTO projetWeb.edits(name,descript) VALUES ("amphi","salle de conférence");
 INSERT INTO projetWeb.edits(name,descript) VALUES ("kino","salle de vidéo projection");
 INSERT INTO projetWeb.edits(name,descript) VALUES ("hdmi3","cable hdmi de 3 mètres");
